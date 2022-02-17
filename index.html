@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tofu</title>
+    <style>
+      body {
+        background-color: #17141d;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      .popular-items {
+        width: 30%;
+      }
+      #nav-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(155, 155, 155);
+      }
+      .product-text {
+        margin-top: 50px;
+      }
+      .nav-elements {
+        text-decoration: none;
+      }
+      .product-container {
+        display: flex;
+        padding: 48px;
+        overflow-x: scroll;
+      }
+      .products {
+        position: relative;
+        flex-direction: column;
+        padding: 24px;
+        width: 400px;
+        min-width: 200px;
+        height: 200px;
+        border-radius: 16px;
+        background: #17141d;
+        box-shadow: -16px 0 48px #000;
+        transition: transform 0.2s linear;
+      }
+      .products:hover {
+        transform: translateY(-16px);
+      }
+      .products:hover ~ .products {
+        transform: translateX(130px);
+      }
+      .products:not(:first-child) {
+        margin-left: -130px;
+      }
+      .product-container::-webkit-scrollbar {
+        width: 5px;
+        height: 10px;
+      }
+      .product-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      .product-container::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+      .product-container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <div class="nav-icons"><a class="nav-elements" href="#">Erasers</a></div>
+      <div class="nav-icons"><a class="nav-elements" href="#">Erasers</a></div>
+      <div class="nav-icons"><a class="nav-elements" href="#">Erasers</a></div>
+      <div class="nav-icons"><a class="nav-elements" href="#">Erasers</a></div>
+      <div class="nav-icons"><a class="nav-elements" href="#">Erasers</a></div>
+    </nav>
+    <section class="product-text">
+      <span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+          error officia necessitatibus vero expedita eveniet architecto ea nihil
+          dolorum, itaque delectus, impedit nobis voluptatem hic iusto accusamus
+          molestiae earum, sunt laborum odit voluptate! Accusantium quasi, velit
+          vero nulla illum tempora ab quas. Asperiores quo voluptatum voluptates
+          dolores omnis? Tempore, possimus facere facilis ex veritatis cumque
+          iste explicabo sit sequi quas dignissimos ad aspernatur voluptas
+          corrupti reprehenderit accusamus delectus iure enim expedita!
+          Voluptatibus, quaerat! Deserunt, soluta qui tempora eaque, nemo,
+          accusamus earum libero quibusdam debitis quae magni? Nostrum dolor,
+          pariatur aliquam perspiciatis eveniet ad cumque ullam ex tenetur nobis
+          quas quasi at consectetur laudantium earum. Dolores quis expedita,
+          recusandae earum delectus at id veritatis exercitationem molestiae non
+          nobis? Sit natus alias fuga et accusantium laboriosam dolor, delectus
+          consequatur ducimus aspernatur error. Non illum vitae dicta? Quos
+          ipsum commodi vero ut quam facere, architecto quaerat nam corporis
+          iusto. Harum quis accusantium, praesentium mollitia rerum error
+          accusamus quidem culpa est quos ab temporibus. Pariatur modi
+          distinctio fugit soluta dolorum quos, iste corporis provident.
+          Voluptatibus fugiat minus maxime veniam quos ut, ex beatae ipsam
+          reprehenderit, quia quasi debitis nam officia dolorem tenetur, odio
+          repudiandae ipsum error quae earum dolore in! Beatae architecto minima
+          nostrum et sed blanditiis odio vitae pariatur, accusamus, perferendis
+          est ratione necessitatibus quia, tempore modi. Maiores voluptatum unde
+          provident eius perspiciatis sapiente amet sequi illo dolor ut iure
+          eum, accusamus distinctio. Eveniet repellat sint ab aliquid totam
+          quam, dolor adipisci atque, libero ex, dolorum corporis? Architecto
+          vero sit quod tenetur ullam nihil dolorum cumque aliquid debitis.
+          Accusamus laborum doloremque totam, inventore temporibus recusandae
+          quibusdam perspiciatis distinctio. Eius minima, aliquid totam laborum,
+          nam ab enim modi harum explicabo reprehenderit amet repellendus,
+          voluptatibus soluta officiis optio adipisci porro sed veritatis non
+          mollitia quos libero atque sequi incidunt. Et fugit libero eum
+          officiis tempore!
+        </p></span
+      >
+      <div class="popular-items"><h2>Our Popular Products</h2></div>
+    </section>
+    <section class="product-container">
+      <article class="products">
+        <header class="product-name">
+          <h2>Erasers</h2>
+          <p>Hi</p>
+        </header>
+      </article>
+      <article class="products">
+        <header class="product-name">
+          <h2>Erasers</h2>
+          <p>Hi</p>
+        </header>
+      </article>
+      <article class="products">
+        <header class="product-name">
+          <h2>Erasers</h2>
+          <p>Hi</p>
+        </header>
+      </article>
+      <article class="products">
+        <header class="product-name">
+          <h2>Erasers</h2>
+          <p>Hi</p>
+        </header>
+      </article>
+      <article class="products">
+        <header class="product-name">
+          <h2>Erasers</h2>
+          <p>Hi</p>
+        </header>
+      </article>
+    </section>
+  </body>
+</html>
