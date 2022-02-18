@@ -4,16 +4,14 @@
     <title>Tofu</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Shizuru&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
       :root {
         --nav-bar-bgcolor: rgb(155, 155, 155);
         --nav-icons-bgcolor: rgba(255, 255, 255, 0.329);
-        --product-bg-color: #ffacad;
-        --scrollbar-bgcolor: rgb(12, 105, 117);
-        --scrollbar-thumbcolor: rgb(117, 77, 100);
-        --scrollbar-hovercolor: rgba(117, 77, 100, 0.6);
-        --page-font: "Patrick Hand", cursive;
+        --page-bgcolor: beige;
+        --scrollbar-bgcolor: #17141d;
+        --page-font: "Indie Flower", cursive;
         --shadow-color: rgb(126, 126, 128);
       }
       body {
@@ -26,7 +24,14 @@
         margin: 0;
         padding: 0;
       }
-
+      .popular-items {
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: #17141d;
+        height: 300px;
+        border-radius: 10px;
+      }
       #nav-bar {
         position: fixed;
         top: 0;
@@ -35,9 +40,9 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: #3b6a75;
-        /* background-size: 100%;
-        background-position: top; */
+        background-image: url("/Pictures/nikita-ivanov-y7cXY85Iwdk-unsplash.jpg");
+        background-size: 100%;
+        background-position: top;
       }
       .links {
         margin: auto 20px;
@@ -78,26 +83,11 @@
         color: rgb(255, 255, 255);
         font-size: 22px;
       }
-      .popular-items {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        float: left;
-        margin: 20px 20px 0 20px;
-        background-color: var(--product-bg-color);
-        border: 3px solid#518D8A;
-        width: 250px;
-        height: 300px;
-        border-radius: 10px;
-        padding: 10px;
-        font-family: "Kalam", cursive;
-        font-size: 30px;
-        text-align: center;
+      .product-text {
+        width: 100%;
+        margin: 44px auto auto auto;
       }
       .product-container {
-        margin-right: 50px;
-        border-right: 3px solid;
-        border-image: linear-gradient(to bottom, red, yellow) 1 100%;
         display: flex;
         padding: 48px 20px 48px 26px;
         overflow-x: scroll;
@@ -110,13 +100,12 @@
         min-width: 250px;
         height: 200px;
         border-radius: 16px;
-        background: var(--product-bg-color);
+        background: var(--page-bgcolor);
         box-shadow: -10px 0 16px var(--shadow-color);
         transition: transform 0.2s linear;
       }
       .products:hover {
         transform: translateY(-16px);
-        transform: rotate(10deg);
       }
       .products:hover ~ .products {
         transform: translateX(130px);
@@ -124,21 +113,11 @@
       .products:not(:first-child) {
         margin-left: -130px;
       }
-      .product-text {
-        width: 1fr;
-        margin: 44px auto auto auto;
-        padding: 0 40px 0 40px;
-      }
       span {
         font-family: var(--page-font);
-        font-size: 23px;
-        text-align: justify;
         text-decoration: underline;
         text-underline-offset: 12px;
         line-height: 38px;
-      }
-      .product-name {
-        font-family: "Kalam", cursive;
       }
       .product-container::-webkit-scrollbar {
         height: 5px;
@@ -147,10 +126,10 @@
         background: var(--scrollbar-bgcolor);
       }
       .product-container::-webkit-scrollbar-thumb {
-        background: var(--scrollbar-thumbcolor);
+        background: #888;
       }
       .product-container::-webkit-scrollbar-thumb:hover {
-        background: var(--scrollbar-hovercolor);
+        background: #555;
       }
       ::-webkit-scrollbar {
         width: 5px;
@@ -159,10 +138,10 @@
         background: var(--scrollbar-bgcolor);
       }
       ::-webkit-scrollbar-thumb {
-        background: var(--scrollbar-thumbcolor);
+        background: #888;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: var(--scrollbar-hovercolor);
+        background: #555;
       }
     </style>
   </head>
@@ -248,6 +227,7 @@
       >
     </section>
     <div class="popular-items"><h2>Our Popular Products</h2></div>
+
     <section class="product-container">
       <article class="products">
         <header class="product-name">
