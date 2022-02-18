@@ -3,9 +3,22 @@
   <head>
     <title>Tofu</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Shizuru&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+      :root {
+        --nav-bar-bgcolor: rgb(155, 155, 155);
+        --nav-icons-bgcolor: rgba(255, 255, 255, 0.329);
+        --page-bgcolor: #17141d;
+        --scrollbar-bgcolor: #17141d;
+        --page-font: "Josefin Sans", sans-serif;
+      }
       body {
-        background-color: #17141d;
-        color: white;
+        background-image: url("Pictures/stil-AVWmtS-qK3Y-unsplash.jpg");
+        background-position: top top;
+        background-size: 100%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: black;
         margin: 0;
         padding: 0;
       }
@@ -16,17 +29,55 @@
         position: fixed;
         top: 0;
         width: 100%;
-        height: 50px;
+        height: 44px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
         align-items: center;
-        background-color: rgb(155, 155, 155);
+        background-image: url("/Pictures/nikita-ivanov-y7cXY85Iwdk-unsplash.jpg");
+        background-size: 100%;
+        background-position: top;
       }
-      .product-text {
-        margin-top: 50px;
+      .links {
+        margin: auto 20px;
+      }
+      .home-icon {
+        position: absolute;
+        left: 20px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        transition: 0.3s linear;
+      }
+      .home-image {
+        height: 35px;
+      }
+      .home-icon:hover {
+        background-color: var(--nav-icons-bgcolor);
+      }
+      .nav-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 44px;
+        padding: 0 13px;
+        transition: background-color 0.3s linear;
+        transform: translateY(-2px);
+        padding-bottom: 3px;
+      }
+      .nav-icons:hover {
+        background-color: var(--nav-icons-bgcolor);
       }
       .nav-elements {
         text-decoration: none;
+        font-family: "Shizuru", cursive;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+      }
+      .product-text {
+        margin-top: 50px;
       }
       .product-container {
         display: flex;
@@ -41,8 +92,8 @@
         min-width: 200px;
         height: 200px;
         border-radius: 16px;
-        background: #17141d;
-        box-shadow: -16px 0 48px #000;
+        background: var(--page-bgcolor);
+        box-shadow: -16px 0 32px #000;
         transition: transform 0.2s linear;
       }
       .products:hover {
@@ -54,12 +105,14 @@
       .products:not(:first-child) {
         margin-left: -130px;
       }
+      span {
+        font-family: var(--page-font);
+      }
       .product-container::-webkit-scrollbar {
-        width: 5px;
-        height: 10px;
+        height: 5px;
       }
       .product-container::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        background: var(--scrollbar-bgcolor);
       }
       .product-container::-webkit-scrollbar-thumb {
         background: #888;
@@ -68,10 +121,10 @@
         background: #555;
       }
       ::-webkit-scrollbar {
-        width: 10px;
+        width: 5px;
       }
       ::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        background: var(--scrollbar-bgcolor);
       }
       ::-webkit-scrollbar-thumb {
         background: #888;
@@ -83,11 +136,21 @@
   </head>
   <body>
     <nav id="nav-bar">
-      <div class="nav-icons"><a class="nav-elements" href="#">Erasers</a></div>
-      <div class="nav-icons"><a class="nav-elements" href="#">Erasers</a></div>
-      <div class="nav-icons"><a class="nav-elements" href="#">Erasers</a></div>
-      <div class="nav-icons"><a class="nav-elements" href="#">Erasers</a></div>
-      <div class="nav-icons"><a class="nav-elements" href="#">Erasers</a></div>
+      <a class="home-icon" href="#"
+        ><img
+          class="home-image"
+          src="/Pictures/MicrosoftTeams-image (6).png"
+          alt=""
+      /></a>
+      <a class="nav-elements" href="#"><div class="nav-icons">Erasers</div></a>
+      <a class="nav-elements" href="#"><div class="nav-icons">Pencils</div></a>
+      <a class="nav-elements" href="#"><div class="nav-icons">Rulers</div></a>
+      <a class="nav-elements" href="#"
+        ><div class="nav-icons">Notebooks</div></a
+      >
+      <a class="nav-elements" href="#"
+        ><div class="nav-icons">Calculators</div></a
+      >
     </nav>
     <section class="product-text">
       <span>
