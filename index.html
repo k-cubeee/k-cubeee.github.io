@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Tofu</title>
+    <link rel="shortcut icon" href="/Pictures/tofu.ico" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Shizuru&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
@@ -9,8 +10,8 @@
       :root {
         --nav-bar-bgcolor: rgb(155, 155, 155);
         --nav-icons-bgcolor: rgba(255, 255, 255, 0.329);
-        --product-bg-color: #efe0d0;
-        --scrollbar-bgcolor: rgb(12, 105, 117);
+        --product-bg-color: rgb(239, 224, 208);
+        --scrollbar-bgcolor: rgb(4, 29, 32);
         --scrollbar-thumbcolor: rgb(117, 77, 100);
         --scrollbar-hovercolor: rgba(117, 77, 100, 0.6);
         --page-font: "Patrick Hand", cursive;
@@ -26,7 +27,6 @@
         margin: 0;
         padding: 0;
       }
-
       #nav-bar {
         position: fixed;
         top: 0;
@@ -35,12 +35,8 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: #3b6a75;
-        /* background-size: 100%;
-        background-position: top; */
-      }
-      .links {
-        margin: auto 20px;
+        background-color: rgb(59, 106, 117);
+        z-index: 100;
       }
       .home-icon {
         position: absolute;
@@ -75,8 +71,35 @@
       .nav-elements {
         text-decoration: none;
         font-family: "Shizuru", cursive;
-        color: rgb(255, 255, 255);
+        color: rgb(255, 255, 0);
         font-size: 22px;
+      }
+      .image-holder {
+        float: right;
+        margin: 40px 40px 0px 30px;
+        display: flex;
+        position: relative;
+      }
+      .eraser-image {
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 10px 4px 8px 0 rgba(0, 0, 0, 0.2),
+          -10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transform: translateY(20px);
+        transform: rotate(2deg);
+        border: 5px solid #00deff;
+      }
+      .eraser-image:hover {
+        animation: rotate-back-and-forth 1s linear infinite;
+        transform-origin: top;
+      }
+      .pin-image {
+        z-index: 2;
+        position: absolute;
+        width: 30px;
+        left: 50%;
+        transform: translate(30%, -50%);
       }
       .popular-items {
         display: flex;
@@ -85,7 +108,7 @@
         float: left;
         margin: 20px 20px 0 20px;
         background-color: var(--product-bg-color);
-        border: 3px solid#518D8A;
+        border: 3px solid rgb(81, 141, 138);
         width: 250px;
         height: 300px;
         border-radius: 10px;
@@ -97,9 +120,14 @@
       .product-container {
         margin-right: 50px;
         border-right: 3px solid;
-        border-image: linear-gradient(to bottom, red, yellow) 1 100%;
+        border-image: linear-gradient(
+            to bottom,
+            rgb(255, 0, 0),
+            rgb(255, 255, 0)
+          )
+          1 100%;
         display: flex;
-        padding: 48px 20px 48px 26px;
+        padding: 48px 20px 25px 26px;
         overflow-x: scroll;
       }
       .products {
@@ -164,6 +192,17 @@
       ::-webkit-scrollbar-thumb:hover {
         background: var(--scrollbar-hovercolor);
       }
+      @keyframes rotate-back-and-forth {
+        from {
+          transform: rotate(2deg);
+        }
+        50% {
+          transform: rotate(-2deg);
+        }
+        to {
+          transform: rotate(2deg);
+        }
+      }
     </style>
   </head>
   <body>
@@ -184,6 +223,14 @@
         ><div class="nav-icons">Calculators</div></a
       >
     </nav>
+    <div class="image-holder">
+      <img class="pin-image" src="/Pictures/pin.png" alt="Pin" />
+      <img
+        class="eraser-image"
+        src="/Pictures/Eraser stacked.jpg"
+        alt="Eraser Stacked"
+      />
+    </div>
     <section class="product-text">
       <span>
         <p>
