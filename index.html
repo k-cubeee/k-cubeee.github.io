@@ -7,6 +7,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Shizuru&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
       :root {
         --nav-bar-bgcolor: rgb(155, 155, 155);
         --nav-icons-bgcolor: rgba(255, 255, 255, 0.329);
@@ -61,18 +62,46 @@
         width: auto;
         height: 44px;
         padding: 0 13px;
-        transition: background-color 0.3s linear;
+        transition: 0.3s linear;
         transform: translateY(-2px);
         padding-bottom: 3px;
       }
       .nav-icons:hover {
         background-color: var(--nav-icons-bgcolor);
+        color: #36fddf;
       }
       .nav-elements {
         text-decoration: none;
         font-family: "Shizuru", cursive;
         color: rgb(255, 255, 0);
         font-size: 22px;
+      }
+      .page-title {
+        margin: 44px 0 0 0;
+        font-size: 80px;
+        padding: 0 40px 0 40px;
+        font-family: "Itim", cursive;
+        font-size: 72px;
+      }
+      .title-subtext {
+        background: linear-gradient(
+          to right,
+          rgb(216, 213, 7),
+          rgb(43, 206, 181)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .title-bullet {
+        margin: 0;
+        list-style-image: url("Pictures/tofu.png");
+      }
+      hr {
+        margin: 0;
+        height: 2px;
+        border: 0;
+        background-color: black;
       }
       .image-holder {
         float: right;
@@ -88,6 +117,7 @@
           -10px 6px 20px 0 rgba(0, 0, 0, 0.19);
         transform: translateY(20px);
         transform: rotate(2deg);
+        transform-origin: top;
         border-radius: 10px;
         border: 5px solid #00deff;
       }
@@ -107,8 +137,8 @@
         align-items: center;
         justify-content: center;
         float: left;
-        margin: 20px 20px 0 20px;
-        background-color: var(--product-bg-color);
+        margin: 20px 20px 40px 20px;
+        background-color: #f2fedc;
         border: 3px solid rgb(81, 141, 138);
         width: 250px;
         height: 300px;
@@ -117,6 +147,16 @@
         font-family: "Kalam", cursive;
         font-size: 30px;
         text-align: center;
+      }
+      .popular-title {
+        background: linear-gradient(
+          to right,
+          rgb(216, 213, 7),
+          rgb(43, 206, 181)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
       .product-container {
         margin-right: 50px;
@@ -131,11 +171,16 @@
         padding: 48px 20px 25px 26px;
         overflow-x: scroll;
       }
+      .product-subtext {
+        margin: 0;
+        font-size: 30px;
+        color: rgb(34, 150, 132);
+      }
       .products {
         position: relative;
+        display: flex;
         flex-direction: column;
         padding: 24px;
-        width: 400px;
         min-width: 250px;
         height: 200px;
         border-radius: 16px;
@@ -143,10 +188,19 @@
         box-shadow: -10px 0 16px var(--shadow-color);
         transition: transform 0.2s linear;
       }
-      .products:hover {
+      .logo {
+        width: 55px;
+      }
+      .product-subtext ~ p {
+        margin-top: 7px;
+      }
+      .extra-space {
+        margin-bottom: 32px;
+      }
+      /* .products:hover {
         transform: translateY(-16px);
         transform: rotate(10deg);
-      }
+      } */
       .products:hover ~ .products {
         transform: translateX(130px);
       }
@@ -155,16 +209,21 @@
       }
       .product-text {
         width: 1fr;
-        margin: 44px auto auto auto;
         padding: 0 40px 0 40px;
       }
-      span {
+      .page-text {
         font-family: var(--page-font);
         font-size: 23px;
         text-align: justify;
         text-decoration: underline;
         text-underline-offset: 12px;
         line-height: 38px;
+      }
+      .subtext {
+        margin-block-start: 0px;
+      }
+      .resource-links {
+        color: rgb(81, 141, 138);
       }
       .product-name {
         font-family: "Kalam", cursive;
@@ -226,17 +285,21 @@
     </nav>
     <div class="image-holder">
       <img class="pin-image" src="/Pictures/pin.png" alt="Pin" />
-      <a href="#">
-        <img
-          class="eraser-image"
-          src="/Pictures/Eraser stacked.jpg"
-          alt="Eraser Stacked"
-        />
-      </a>
+      <img
+        class="eraser-image"
+        src="/Pictures/stationery image.jpg"
+        alt="Eraser Stacked"
+      />
+    </div>
+    <div class="page-title">
+      <ul class="title-bullet">
+        <li><span class="title-subtext">Tofu</span></li>
+      </ul>
+      <hr />
     </div>
     <section class="product-text">
-      <span>
-        <p>
+      <span class="page-text">
+        <p class="subtext">
           Welcome to Tofu's stationery shop! Here, we provide the high end
           stationery with the most suitable prices. One of the reasons we're
           famous for would definitely be our infamous backstory and how we came
@@ -263,48 +326,80 @@
         </p></span
       >
     </section>
-    <div class="popular-items"><h2>Our Popular Products</h2></div>
+    <div class="popular-items">
+      <h2 class="popular-title">Our Popular Products</h2>
+    </div>
     <section class="product-container">
       <article class="products">
         <header class="product-name">
-          <h2>Erasers</h2>
-          <p>Hi</p>
+          <h2 class="product-subtext">Erasers</h2>
+          <p>
+            Check out Tofu's extensive line of extremely efficient and aesthetic
+            erasers
+          </p>
+          <img class="logo" src="/Pictures/eraser logo.png" alt="Eraser Logo" />
         </header>
       </article>
       <article class="products">
         <header class="product-name">
-          <h2>Erasers</h2>
-          <p>Hi</p>
+          <h2 class="product-subtext">Pencils</h2>
+          <p class="extra-space">
+            Explore Tofu's vast variety of eco-friendly and exquisite pencils
+          </p>
+          <img class="logo" src="/Pictures/pencil logo.png" alt="" />
         </header>
       </article>
       <article class="products">
         <header class="product-name">
-          <h2>Erasers</h2>
-          <p>Hi</p>
+          <h2 class="product-subtext">Rulers</h2>
+          <p class="extra-space">
+            Visit Tofu's collection of elastic but durable rulers
+          </p>
+          <img class="logo" src="/Pictures/ruler logo.png" alt="" />
         </header>
       </article>
       <article class="products">
         <header class="product-name">
-          <h2>Erasers</h2>
-          <p>Hi</p>
+          <h2 class="product-subtext">Notebooks</h2>
+          <p class="extra-space">
+            Browse Tofu's beautiful collection of notebooks
+          </p>
+          <img class="logo" src="/Pictures/notebook logo.png" alt="" />
         </header>
       </article>
       <article class="products">
         <header class="product-name">
-          <h2>Erasers</h2>
-          <p>Hi</p>
+          <h2 class="product-subtext">Calculators</h2>
+          <p class="extra-space">
+            Also check out Tofu's amazingly long lasting calculators
+          </p>
+          <img class="logo" src="/Pictures/calculator logo.png" alt="" />
         </header>
       </article>
       <article class="products">
         <header class="product-name">
-          <h2>Erasers</h2>
-          <p>Hi</p>
+          <h2 class="product-subtext">Calculators</h2>
+          <p class="extra-space">
+            Kaung Khant Kyaw <br />
+            Moe Oo Nwe <br />
+            Aye Myo Min <br />
+            Phoo Mya Chai <br />
+            Min Set Lwin
+          </p>
         </header>
       </article>
       <article class="products">
         <header class="product-name">
-          <h2>Erasers</h2>
-          <p>Hi</p>
+          <h2 class="product-subtext">Our Team</h2>
+          <p class="extra-space">
+            <a class="resource-links" href="https://flaticon.com"
+              >flaticon.com</a
+            >
+            <br />
+            <a class="resource-links" href="https://favicon.io">favicon.io</a>
+            <br />
+          </p>
+          <img src="/Pictures/resource logo.png" alt="" />
         </header>
       </article>
     </section>
