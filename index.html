@@ -20,9 +20,7 @@
       }
       body {
         background-color: rgb(238, 238, 176);
-        background-position: top top;
         background-size: 100%;
-        background-attachment: fixed;
         background-repeat: no-repeat;
         color: black;
         margin: 0;
@@ -38,6 +36,7 @@
         align-items: center;
         background-color: rgb(59, 106, 117);
         z-index: 100;
+        box-shadow: 0px 0.5px 16px var(--shadow-color);
       }
       .home-icon {
         position: absolute;
@@ -290,7 +289,7 @@
       <a class="nav-elements" href="notebook1.html"
         ><div class="nav-icons">Notebooks</div></a
       >
-      <a class="nav-elements" href="#"
+      <a class="nav-elements" href="AMM.html"
         ><div class="nav-icons">Highlighters</div></a
       >
       <a class="nav-elements" href="#"
@@ -381,7 +380,9 @@
       </article>
       <article class="products">
         <header class="product-name">
-          <h2 class="product-subtext">Highlighters</h2>
+          <a class="product-link" href="AMM.html">
+            <h2 class="product-subtext">Highlighters</h2>
+          </a>
           <p class="extra-space">
             Browse Tofu's assorted collection of colorful highlighters
           </p>
@@ -392,7 +393,6 @@
           />
         </header>
       </article>
-
       <article class="products">
         <header class="product-name">
           <h2 class="product-subtext">Calculators</h2>
