@@ -78,7 +78,6 @@
       }
       .page-title {
         margin: 44px 0 0 0;
-        font-size: 80px;
         padding: 0 40px 0 40px;
         font-family: "Itim", cursive;
         font-size: 72px;
@@ -228,6 +227,19 @@
       .product-name {
         font-family: "Kalam", cursive;
       }
+      .product-link {
+        text-decoration: none;
+      }
+      .product-subtext:hover {
+        background: linear-gradient(
+          to right,
+          rgb(216, 213, 7),
+          rgb(43, 206, 181)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
       .product-container::-webkit-scrollbar {
         height: 5px;
       }
@@ -275,7 +287,7 @@
       /></a>
       <a class="nav-elements" href="#"><div class="nav-icons">Pencils</div></a>
       <a class="nav-elements" href="#"><div class="nav-icons">Erasers</div></a>
-      <a class="nav-elements" href="#"
+      <a class="nav-elements" href="notebook1.html"
         ><div class="nav-icons">Notebooks</div></a
       >
       <a class="nav-elements" href="#"
@@ -286,10 +298,10 @@
       >
     </nav>
     <div class="image-holder">
-      <img class="pin-image" src="/Pictures/pin.png" alt="Pin" />
+      <img class="pin-image" src="Pictures/pin.png" alt="Pin" />
       <img
         class="eraser-image"
-        src="/Pictures/stationery image.jpg"
+        src="Pictures/stationery image.jpg"
         alt="Eraser Stacked"
       />
     </div>
@@ -338,7 +350,7 @@
           <p class="extra-space">
             Explore Tofu's vast variety of eco-friendly and exquisite pencils
           </p>
-          <img class="logo" src="/Pictures/pencil logo.png" alt="Pencil Logo" />
+          <img class="logo" src="Pictures/pencil logo.png" alt="Pencil Logo" />
         </header>
       </article>
       <article class="products">
@@ -348,19 +360,21 @@
             Check out Tofu's extensive line of extremely efficient and aesthetic
             erasers
           </p>
-          <img class="logo" src="/Pictures/eraser-logo.png" alt="Eraser Logo" />
+          <img class="logo" src="Pictures/eraser-logo.png" alt="Eraser Logo" />
         </header>
       </article>
       <article class="products">
         <header class="product-name">
-          <h2 class="product-subtext">Notebooks</h2>
+          <a class="product-link" href="notebook1.html">
+            <h2 class="product-subtext">Notebooks</h2>
+          </a>
           <p>
             Step into Tofu's world of beautiful, eco-friendly notebooks with
             intricate designs
           </p>
           <img
             class="logo"
-            src="/Pictures/notebook logo.png"
+            src="Pictures/notebook logo.png"
             alt="Notebook Logo"
           />
         </header>
@@ -373,7 +387,7 @@
           </p>
           <img
             class="logo"
-            src="/Pictures/highlighter logo.png"
+            src="Pictures/highlighter logo.png"
             alt="Ruler Logo"
           />
         </header>
@@ -387,7 +401,7 @@
           </p>
           <img
             class="logo"
-            src="/Pictures/calculator logo.png"
+            src="Pictures/calculator logo.png"
             alt="Calculator Logo"
           />
         </header>
@@ -415,7 +429,7 @@
             <a class="resource-links" href="https://favicon.io">favicon.io</a>
             <br />
           </p>
-          <img src="/Pictures/resource logo.png" alt="Resource Logo" />
+          <img src="Pictures/resource logo.png" alt="Resource Logo" />
         </header>
       </article>
     </section>

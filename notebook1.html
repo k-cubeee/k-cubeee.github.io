@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tofu</title>
+    <link rel="shortcut icon" href="/Pictures/tofu.ico" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Shizuru&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+      :root {
+        --nav-bar-bgcolor: rgb(155, 155, 155);
+        --nav-icons-bgcolor: rgba(255, 255, 255, 0.329);
+        --product-bg-color: rgb(239, 224, 208);
+        --scrollbar-bgcolor: rgb(4, 29, 32);
+        --scrollbar-thumbcolor: rgb(117, 77, 100);
+        --scrollbar-hovercolor: rgba(117, 77, 100, 0.6);
+        --page-font: "Patrick Hand", cursive;
+        --shadow-color: rgb(126, 126, 128);
+      }
+      body {
+        background-color: rgb(238, 238, 176);
+        background-size: 100%;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+      }
+      #nav-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 44px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: rgb(59, 106, 117);
+        z-index: 100;
+      }
+      .home-icon {
+        position: absolute;
+        left: 20px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        transition: 0.3s linear;
+      }
+      .home-image {
+        height: 35px;
+      }
+      .home-icon:hover {
+        background-color: var(--nav-icons-bgcolor);
+      }
+      .nav-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 44px;
+        padding: 0 13px;
+        transition: 0.3s linear;
+        transform: translateY(-2px);
+        padding-bottom: 3px;
+      }
+      .nav-icons:hover {
+        background-color: var(--nav-icons-bgcolor);
+        color: #36fddf;
+      }
+      .nav-elements {
+        text-decoration: none;
+        font-family: "Shizuru", cursive;
+        color: rgb(255, 255, 0);
+        font-size: 22px;
+      }
+      h3 {
+        color: green;
+        font-family: "Kalam", cursive;
+        text-align: center;
+        font-size: 23px;
+      }
+      h1 {
+        margin-top: 44px;
+        margin-bottom: 0px;
+        font-family: "Kalam", cursive;
+        text-align: center;
+        font-size: 72px;
+        font-weight: normal;
+      }
+      .title-subtext {
+        background: linear-gradient(
+          to right,
+          rgb(216, 213, 7),
+          rgb(43, 206, 181)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      p {
+        color: black;
+        font-family: var(--page-font);
+        font-size: 23px;
+        padding: 0 25px 0 25px;
+      }
+      .container {
+        margin: 50px;
+        display: flex;
+      }
+      .box {
+        width: 410px;
+        height: 500px;
+        margin: -30px 10px 20px 10px;
+        background: #fff;
+        border-radius: 12px;
+        background: khaki;
+        color: red;
+        transform: translate(0px 15px);
+        transition: 330ms ease-in-out;
+      }
+      .container ul {
+        padding: 0px;
+        margin: 0px;
+      }
+      .container ul li {
+        list-style: none;
+        float: left;
+        width: 25%;
+        height: 300px;
+        margin: 70px 100px 183.5px 150px;
+      }
+      .box:hover {
+        padding: 0px 0px 10px 0px;
+        box-shadow: 1px 12px 13px 2px rgba(0, 0, 0, 0.3);
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--scrollbar-bgcolor);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumbcolor);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--scrollbar-hovercolor);
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <a class="home-icon" href="index.html"
+        ><img
+          class="home-image"
+          src="/Pictures/MicrosoftTeams-image (6).png"
+          alt=""
+      /></a>
+      <a class="nav-elements" href="#"><div class="nav-icons">Pencils</div></a>
+      <a class="nav-elements" href="#"><div class="nav-icons">Erasers</div></a>
+      <a class="nav-elements" href="#"
+        ><div class="nav-icons">Notebooks</div></a
+      >
+      <a class="nav-elements" href="#"
+        ><div class="nav-icons">Highlighters</div></a
+      >
+      <a class="nav-elements" href="#"
+        ><div class="nav-icons">Calculators</div></a
+      >
+    </nav>
+    <h1>
+      <span class="title-subtext">Welcome to the notebooks section!!</span>🥳
+    </h1>
+    <p>
+      Welcome to the notebooks section!!🥳 Here, you can find various types of
+      notebooks. The reason our notebooks are quite well-known is because
+      they're all of high quality and we provide a wide range of number of pages
+      to choose from. <br /><br />
+      Here, you'll be able to find <br />
+      ✒️ Classic school notebooks <br />
+      ✒️ Daily planners <br />
+      ✒️ Diaries <br />
+      ✒️ Customised books
+      <br />
+      <br />
+      Also, we also have different designs and concepts to choose from, so feel
+      free to browse through them all. The customised books usually take about 2
+      to 3 weeks, so please keep that in mind before placing an order for one.
+      If you have further questions about our notebooks, please contact our
+      hotline : #666-666-666. Thank you, have a nice day!💌
+    </p>
+    <hr width="90%" size="6px" color="green" />
+    <p>
+      You can purchase our products
+      <a href="https://www.amazon.com" target="_blank"> here! </a>
+    </p>
+    <div class="container">
+      <ul>
+        <li>
+          <div class="box">
+            <center>
+              <img
+                src="Pictures/book1.png"
+                width="400px"
+                height="430px"
+                style="vertical-align: top"
+                alt="tofu"
+              />
+            </center>
+            <h3 style="margin: 10px">😊TOFU Signature Notebook😊</h3>
+          </div>
+        </li>
+
+        <li>
+          <div class="box">
+            <center>
+              <img
+                src="Pictures/book2.png"
+                width="400px"
+                height="430px"
+                style="vertical-align: top"
+                alt="muji"
+              />
+            </center>
+            <h3 style="margin: 10px">📚 Muji Classic 5 Book Set📚</h3>
+          </div>
+        </li>
+
+        <li>
+          <div class="box">
+            <center>
+              <img
+                src="Pictures/book3.png"
+                width="400px"
+                height="430px"
+                style="vertical-align: top"
+                alt="kakao"
+              />
+            </center>
+            <h3 style="margin: 10px">🐣Sanrio Friends' Notebook🐣</h3>
+          </div>
+        </li>
+
+        <li>
+          <div class="box">
+            <center>
+              <img
+                src="Pictures/book4.png"
+                width="400px"
+                height="430px"
+                style="vertical-align: top"
+                alt="kakao"
+              />
+            </center>
+            <h3 style="margin: 10px">🐧Kakao Friends' 2022 Planner🐧</h3>
+          </div>
+        </li>
+
+        <li>
+          <div class="box">
+            <center>
+              <img
+                src="Pictures/book5.png"
+                width="400px"
+                height="430px"
+                style="vertical-align: top"
+                alt="constellation"
+              />
+            </center>
+            <h3 style="margin: 1px">🌌Customised Constellation Notebook🌠</h3>
+          </div>
+        </li>
+
+        <li>
+          <div class="box">
+            <center>
+              <img
+                src="Pictures/book6.png"
+                width="400px"
+                height="430px"
+                style="vertical-align: top"
+                alt="collage"
+              />
+            </center>
+            <h3 style="margin: 1px">🥂Customised Collage Notebook🖤</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
