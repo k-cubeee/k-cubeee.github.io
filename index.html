@@ -21,7 +21,6 @@
       body {
         background-color: rgb(238, 238, 176);
         background-size: 100%;
-        background-repeat: no-repeat;
         color: black;
         margin: 0;
         padding: 0;
@@ -97,7 +96,7 @@
       }
       hr {
         margin: 0;
-        height: 2px;
+        height: 0.1rem;
         border: 0;
         background-color: black;
       }
@@ -189,11 +188,11 @@
       .logo {
         width: 55px;
       }
-      .product-subtext ~ p {
+      .text-margin {
         margin-top: 7px;
       }
       .extra-space {
-        margin-bottom: 32px;
+        margin-bottom: 40px;
       }
       .products:hover {
         transform: translateY(-16px);
@@ -222,14 +221,18 @@
       }
       .resource-links {
         color: rgb(81, 141, 138);
+        margin: 0;
+        padding: 0;
       }
       .product-name {
         font-family: "Kalam", cursive;
       }
       .product-link {
         text-decoration: none;
+        padding: 0;
+        margin: 0;
       }
-      .product-subtext:hover {
+      .product-gradient:hover {
         background: linear-gradient(
           to right,
           rgb(216, 213, 7),
@@ -279,20 +282,21 @@
   <body>
     <nav id="nav-bar">
       <a class="home-icon" href="#"
-        ><img
-          class="home-image"
-          src="/Pictures/MicrosoftTeams-image (6).png"
-          alt=""
+        ><img class="home-image" src="Pictures/tofu logo.png" alt="Tofu Logo"
       /></a>
-      <a class="nav-elements" href="#"><div class="nav-icons">Pencils</div></a>
-      <a class="nav-elements" href="#"><div class="nav-icons">Erasers</div></a>
+      <a class="nav-elements" href="project - Phoo Mya Chai.html"
+        ><div class="nav-icons">Pencils</div></a
+      >
+      <a class="nav-elements" href="eraser.html"
+        ><div class="nav-icons">Erasers</div></a
+      >
       <a class="nav-elements" href="notebook1.html"
         ><div class="nav-icons">Notebooks</div></a
       >
       <a class="nav-elements" href="AMM.html"
         ><div class="nav-icons">Highlighters</div></a
       >
-      <a class="nav-elements" href="#"
+      <a class="nav-elements" href="Calculators.html"
         ><div class="nav-icons">Calculators</div></a
       >
     </nav>
@@ -323,7 +327,7 @@
           suggested making his own customised stationery to use on Earth, since
           having an unsatisfied Prof. wouldn't do good to their research. The
           three of them then went to search for the best crafter on Earth and
-          finally scouted phoo mya, who was known for being the best on Earth.
+          finally scouted Phoo Mya, who was known for being the best on Earth.
           When the stationeries came out, prof K-cube was ecstatic and decided
           to share the products with the world by selling and distributing them.
           One night, after their weekly meetings, he stumbled upon a mapo tofu
@@ -345,8 +349,14 @@
     <section class="product-container">
       <article class="products">
         <header class="product-name">
-          <h2 class="product-subtext">Pencils</h2>
-          <p class="extra-space">
+          <h2 class="product-subtext">
+            <a
+              class="product-link product-subtext"
+              href="project - Phoo Mya Chai.html"
+              ><span class="product-gradient">Pencils</span></a
+            >
+          </h2>
+          <p class="extra-space text-margin">
             Explore Tofu's vast variety of eco-friendly and exquisite pencils
           </p>
           <img class="logo" src="Pictures/pencil logo.png" alt="Pencil Logo" />
@@ -354,8 +364,12 @@
       </article>
       <article class="products">
         <header class="product-name">
-          <h2 class="product-subtext">Erasers</h2>
-          <p>
+          <h2 class="product-subtext">
+            <a class="product-link product-subtext" href="eraser.html">
+              <span class="product-gradient">Erasers</span></a
+            >
+          </h2>
+          <p class="text-margin">
             Check out Tofu's extensive line of extremely efficient and aesthetic
             erasers
           </p>
@@ -364,10 +378,12 @@
       </article>
       <article class="products">
         <header class="product-name">
-          <a class="product-link" href="notebook1.html">
-            <h2 class="product-subtext">Notebooks</h2>
-          </a>
-          <p>
+          <h2 class="product-subtext">
+            <a class="product-link product-subtext" href="notebook1.html">
+              <span class="product-gradient">Notebooks</span></a
+            >
+          </h2>
+          <p class="text-margin">
             Step into Tofu's world of beautiful, eco-friendly notebooks with
             intricate designs
           </p>
@@ -380,10 +396,12 @@
       </article>
       <article class="products">
         <header class="product-name">
-          <a class="product-link" href="AMM.html">
-            <h2 class="product-subtext">Highlighters</h2>
-          </a>
-          <p class="extra-space">
+          <h2 class="product-subtext">
+            <a class="product-link product-subtext" href="AMM.html">
+              <span class="product-gradient">Highlighters</span>
+            </a>
+          </h2>
+          <p class="extra-space text-margin">
             Browse Tofu's assorted collection of colorful highlighters
           </p>
           <img
@@ -395,8 +413,12 @@
       </article>
       <article class="products">
         <header class="product-name">
-          <h2 class="product-subtext">Calculators</h2>
-          <p class="extra-space">
+          <h2 class="product-subtext">
+            <a class="product-link product-subtext" href="Calculators.html">
+              <span class="product-gradient">Calculators</span></a
+            >
+          </h2>
+          <p class="extra-space text-margin">
             Also check out Tofu's amazingly long lasting calculators
           </p>
           <img
@@ -408,8 +430,10 @@
       </article>
       <article class="products">
         <header class="product-name">
-          <h2 class="product-subtext">Our Team</h2>
-          <p class="extra-space">
+          <h2 class="product-subtext">
+            <span class="product-gradient">Our Team</span>
+          </h2>
+          <p class="extra-space text-margin">
             Kaung Khant Kyaw <br />
             Moe Oo Nwe <br />
             Aye Myo Min <br />
@@ -420,8 +444,10 @@
       </article>
       <article class="products">
         <header class="product-name">
-          <h2 class="product-subtext">Our Resources</h2>
-          <p class="extra-space">
+          <h2 class="product-subtext">
+            <span class="product-gradient">Our Resources</span>
+          </h2>
+          <p class="extra-space text-margin">
             <a class="resource-links" href="https://flaticon.com"
               >flaticon.com</a
             >

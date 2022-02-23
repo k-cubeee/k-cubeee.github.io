@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="/Pictures/tofu.ico" />
+    <title>Erasers</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Shizuru&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+      :root {
+        --nav-bar-bgcolor: rgb(155, 155, 155);
+        --nav-icons-bgcolor: rgba(255, 255, 255, 0.329);
+        --product-bg-color: rgb(239, 224, 208);
+        --scrollbar-bgcolor: rgb(4, 29, 32);
+        --scrollbar-thumbcolor: rgb(117, 77, 100);
+        --scrollbar-hovercolor: rgba(117, 77, 100, 0.6);
+        --page-font: "Patrick Hand", cursive;
+        --shadow-color: rgb(126, 126, 128);
+      }
+      body {
+        background-color: rgb(238, 238, 176);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        color: black;
+        margin: 0;
+        padding: 0;
+      }
+      #nav-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 44px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: rgb(59, 106, 117);
+        z-index: 100;
+        box-shadow: 0px 0.5px 16px var(--shadow-color);
+      }
+      .home-icon {
+        position: absolute;
+        left: 20px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        transition: 0.3s linear;
+      }
+      .home-image {
+        height: 35px;
+      }
+      .home-icon:hover {
+        background-color: var(--nav-icons-bgcolor);
+      }
+      .nav-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 44px;
+        padding: 0 13px;
+        transition: 0.3s linear;
+        transform: translateY(-2px);
+        padding-bottom: 3px;
+      }
+      .nav-icons:hover {
+        background-color: var(--nav-icons-bgcolor);
+        color: #36fddf;
+      }
+      .nav-elements {
+        text-decoration: none;
+        font-family: "Shizuru", cursive;
+        color: rgb(255, 255, 0);
+        font-size: 22px;
+      }
+      h1 {
+        margin-top: 44px;
+        text-align: center;
+        font-family: "Kalam", cursive;
+        font-size: 72px;
+        font-weight: normal;
+      }
+      .line-container {
+        width: 1fr;
+      }
+      .page-title {
+        background: linear-gradient(
+          to right,
+          rgb(216, 213, 7),
+          rgb(43, 206, 181)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--scrollbar-bgcolor);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumbcolor);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--scrollbar-hovercolor);
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <a class="home-icon" href="index.html"
+        ><img class="home-image" src="Pictures/tofu logo.png" alt="Tofu Logo"
+      /></a>
+      <a class="nav-elements" href="project - Phoo Mya Chai.html"
+        ><div class="nav-icons">Pencils</div></a
+      >
+      <a class="nav-elements" href="#"><div class="nav-icons">Erasers</div></a>
+      <a class="nav-elements" href="notebook1.html"
+        ><div class="nav-icons">Notebooks</div></a
+      >
+      <a class="nav-elements" href="AMM.html"
+        ><div class="nav-icons">Highlighters</div></a
+      >
+      <a class="nav-elements" href="Calculators.html"
+        ><div class="nav-icons">Calculators</div></a
+      >
+    </nav>
+    <h1><span class="page-title">Welcome to the erasers section!!</span></h1>
+    <div class="line-container"></div>
+  </body>
+</html>
