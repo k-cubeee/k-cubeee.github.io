@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+        <link href="styles.css" rel="stylesheet">
+        <title>Easter Duck</title>
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <nav id="nav-bar">
+            <a class="site-logo-container" href="./index.html">
+                <img class="site-logo" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnQxOXYzMWlnczZwdTN1bHJoNzB0bWlzOTFqNTVhemo3bGUzcXA4cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/7Ybl4CGqkopIyzh9C8/giphy.gif" alt="Cartoon Duck">
+            </a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="./gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./russian-ducklette">Russian Ducklette</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./easter-duck">Easter Duck</a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="easter-duck-title">
+            <span class="easter-title-container">Do you like me?</span>
+            <img class="finger-together" src="./resources/download__3_-removebg-preview.png">
+        </h1>
+        <article class="easter-duck-article">
+            <img class="flower-handing" src="./resources/Meme-removebg-preview.png">
+            <div class="button-container">
+                <button id="yes-button">Yes</button>
+                <button id="no-button">No</button>
+            </div>
+        </article>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                let noButton = document.querySelector('#no-button');
+                let yesButton = document.querySelector('#yes-button');
+                let noClicked = false;
+                let yesClicked = false;
+
+                noButton.addEventListener('click', () => {
+                    if (noClicked == false) {
+                        noButton.innerHTML = 'Did you just try to choose no???';
+
+                        setTimeout(() => {
+                            noButton.innerHTML = "Let's try again";
+                        }, 1000);
+
+                        setTimeout(() => {
+                            noButton.innerHTML = 'No';
+                            noClicked = true;
+                        }, 2000);
+                    }
+                });
+
+                noButton.addEventListener('mouseover', () => {
+                    if (noClicked == true) {
+                        noButton.innerHTML = 'Yes';
+                        noButton.id = 'yes-button';
+                    }
+                });
+
+                noButton.addEventListener('mouseleave', () => {
+                    if (noClicked == true && yesClicked == false) {
+                        noButton.innerHTML = 'No';
+                    }
+                });
+
+                yesButton.addEventListener('click', () => {
+                    document.querySelector('.easter-title-container').innerHTML = 'Awwn, I love you too';
+                    document.querySelector('.finger-together').src = './resources/gatito_rosas-removebg-preview.png';
+                    yesClicked = true;
+                });
+            });
+        </script>
+    </body>
+
+</html>
