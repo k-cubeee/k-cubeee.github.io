@@ -55,7 +55,7 @@
                 let noButton = document.querySelector('#no-button');
 
                 noButton.addEventListener('click', () => {
-                    if (noClicked == false) {
+                    if (noClicked == false && yesClicked == false) {
                         noButton.innerHTML = 'Did you just try to choose no???';
 
                         setTimeout(() => {
