@@ -4,19 +4,20 @@
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <title>Easter Duck</title>
     </head>
 
     <body>
 
         <!-- Navbar -->
-        <nav id="nav-bar">
+        <!-- <nav id="nav-bar">
             <a class="site-logo-container" href="./index.html">
                 <img class="site-logo" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnQxOXYzMWlnczZwdTN1bHJoNzB0bWlzOTFqNTVhemo3bGUzcXA4cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/7Ybl4CGqkopIyzh9C8/giphy.gif" alt="Cartoon Duck">
             </a>
+
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="./gallery.html">Gallery</a>
@@ -25,36 +26,47 @@
                     <a href="./raccoon">Raccoon</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Easter Duck</a>
+                    <a href="./easter-duck">Easter Duck</a>
                 </li>
             </ul>
-        </nav>
+
+            <div class="nav-list-sm">
+                <a class="dropdown-btn" href="#">
+                    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -960 960 960"><path d="M120-240v-80h720v80zm0-200v-80h720v80zm0-200v-80h720v80z"/></svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="./gallery.html">Gallery</a>
+                    <a href="./raccoon">Raccoon</a>
+                    <a href="./easter-duck">Easter Duck</a>
+                </div>
+            </div>
+        </nav> -->
 
         <h1 class="easter-duck-title">
-            <span class="easter-title-container">Do you like me?</span>
-            <img class="finger-together" src="./resources/download__3_-removebg-preview.png">
+            <span class="easter-title-container">Will you be my valentine?</span>
+            <img class="finger-together" alt="Shy" src="./resources/download__3_-removebg-preview.png">
         </h1>
-        <article class="easter-duck-article">
-            <img class="flower-handing" src="./resources/Meme-removebg-preview.png">
+
+        <div class="easter-duck-article">
+            <img class="flower-handing" alt="Giving roses" src="./resources/Meme-removebg-preview.png">
             <div class="button-container">
-                <button id="yes-button">Yes</button>
-                <button id="no-button">No</button>
+                <button class="btn" id="yes-button">Yes</button>
+                <button class="btn" id="no-button">No</button>
             </div>
-        </article>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        </div>
+        <script src="index.js"></script>
         <script>
             let noClicked = false;
             let yesClicked = false;
 
             function changeTitle() {
-                document.querySelector('.easter-title-container').innerHTML = 'Awwn, I love you too';
+                document.querySelector('.easter-title-container').innerHTML = 'Yippeeeee (Pls text me the answer, I haven\\\'t made the backend ;)';
                 document.querySelector('.finger-together').src = './resources/gatito_rosas-removebg-preview.png';
                 yesClicked = true;
             }
 
             document.addEventListener('DOMContentLoaded', () => {
                 let noButton = document.querySelector('#no-button');
-
                 noButton.addEventListener('click', () => {
                     if (noClicked == false && yesClicked == false) {
                         noButton.innerHTML = 'Did you just try to choose no???';
