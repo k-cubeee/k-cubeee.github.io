@@ -10,7 +10,7 @@
 
 body {
     margin: 0;
-    background-color: #e7fdfc;
+    background-color: #e7fdfc !important;
 }
 
 .site-logo {
